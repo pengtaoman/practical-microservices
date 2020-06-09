@@ -1,0 +1,14 @@
+com/acme/ecom/product/InitializationComponent.class
+com/acme/ecom/product/model/ECom$Products$1.class
+com/acme/ecom/product/model/ECom$ProductOrBuilder.class
+com/acme/ecom/product/model/ECom$Products.class
+com/acme/ecom/product/model/ECom$Product$1.class
+com/acme/ecom/product/model/ECom$Products$Builder.class
+com/acme/ecom/product/EcomProductMicroserviceApplication.class
+com/acme/ecom/product/model/ECom.class
+com/acme/ecom/product/controller/ProductRestControllerConfiguration.class
+com/acme/ecom/product/model/ECom$Product$Builder.class
+com/acme/ecom/product/model/ECom$Product.class
+com/acme/ecom/product/controller/ProductRestController.class
+com/acme/ecom/product/model/ECom$1.class
+com/acme/ecom/product/model/ECom$ProductsOrBuilder.class

@@ -1,0 +1,8 @@
+com/acme/ecom/product/EcomProductMicroserviceApplication.class
+com/acme/ecom/product/InitializationComponent.class
+com/acme/ecom/product/model/Product.class
+com/acme/ecom/product/repository/ProductRepository.class
+com/acme/ecom/product/repository/ProductCategoryRepository.class
+com/acme/ecom/product/model/ProductCategory.class
+com/acme/ecom/product/controller/ProductRestController.class
+com/acme/ecom/product/repository/ProductRepositoryConfiguration.class

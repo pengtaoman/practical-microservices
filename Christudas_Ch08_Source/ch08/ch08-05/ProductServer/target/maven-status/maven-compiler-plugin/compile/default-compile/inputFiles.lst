@@ -1,0 +1,8 @@
+/Volumes/860EVO/work/20300528/practical-microservices-architectural-patterns/Christudas_Ch08_Source/ch08/ch08-05/ProductServer/src/main/java/com/acme/ecom/product/controller/ProductRestController.java
+/Volumes/860EVO/work/20300528/practical-microservices-architectural-patterns/Christudas_Ch08_Source/ch08/ch08-05/ProductServer/src/main/java/com/acme/ecom/product/InitializationComponent.java
+/Volumes/860EVO/work/20300528/practical-microservices-architectural-patterns/Christudas_Ch08_Source/ch08/ch08-05/ProductServer/src/main/java/com/acme/ecom/product/model/ProductCategory.java
+/Volumes/860EVO/work/20300528/practical-microservices-architectural-patterns/Christudas_Ch08_Source/ch08/ch08-05/ProductServer/src/main/java/com/acme/ecom/product/EcomProductMicroserviceApplication.java
+/Volumes/860EVO/work/20300528/practical-microservices-architectural-patterns/Christudas_Ch08_Source/ch08/ch08-05/ProductServer/src/main/java/com/acme/ecom/product/repository/ProductRepository.java
+/Volumes/860EVO/work/20300528/practical-microservices-architectural-patterns/Christudas_Ch08_Source/ch08/ch08-05/ProductServer/src/main/java/com/acme/ecom/product/repository/ProductCategoryRepository.java
+/Volumes/860EVO/work/20300528/practical-microservices-architectural-patterns/Christudas_Ch08_Source/ch08/ch08-05/ProductServer/src/main/java/com/acme/ecom/product/model/Product.java
+/Volumes/860EVO/work/20300528/practical-microservices-architectural-patterns/Christudas_Ch08_Source/ch08/ch08-05/ProductServer/src/main/java/com/acme/ecom/product/repository/ProductRepositoryConfiguration.java
