@@ -1,0 +1,7 @@
+export PROXY_IP=10.211.55.11:$(kubectl -nkong get svc kong-proxy --no-headers | awk '{print $5}' | cut -d / -f 1 | cut -d : -f 2)
+
+curl -i -H "Host: example.com" $PROXY_IP/bar/sample
+
+kubectl patch svc echo -p '{"metadata":{"annotations":{"konghq.com/plugins": "rl-by-ip\n"}}}'
+
+
