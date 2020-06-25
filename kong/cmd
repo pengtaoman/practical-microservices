@@ -4,4 +4,8 @@ curl -i -H "Host: example.com" $PROXY_IP/bar/sample
 
 kubectl patch svc echo -p '{"metadata":{"annotations":{"konghq.com/plugins": "rl-by-ip\n"}}}'
 
+kubectl patch svc echo -p '{"metadata":{"annotations":{"konghq.com/plugins": "request-id\n"}}}'
 
+curl -I $PROXY_IP/foo
+
+curl -I -H "Host: example.com" $PROXY_IP/bar/sample

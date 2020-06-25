@@ -1,0 +1,45 @@
+{
+  "service": {
+    "name": "kong",
+    "instances": 1,
+    "cpus": 1,
+    "mem": 512,
+    "role": "*"
+  },
+  "configurations": {
+    "log-level": "notice",
+    "database": {
+      "migrations": true,
+      "use-cassandra": true
+    },
+    "postgres": {
+      "host": "postgresql.marathon.l4lb.thisdcos.directory",
+      "port": 5432,
+      "database": "kong",
+      "user": "kong",
+      "password": "kong"
+    },
+    "cassandra": {
+      "contact-points": "node-0-server.cassandra.autoip.dcos.thisdcos.directory, node-1-server.cassandra.autoip.dcos.thisdcos.directory, node-2-server.cassandra.autoip.dcos.thisdcos.directory",
+      "port": 9042,
+      "keyspace": "kong"
+    }
+  },
+  "networking": {
+    "proxy": {
+      "external-access": true,
+      "vip-port": 8000,
+      "vip-port-ssl": 8443,
+      "virtual-host": "<vhost>",
+      "https-redirect": true,
+      "service-port": 10201
+    },
+    "admin": {
+      "external-access": true,
+      "vip-port": 8001,
+      "vip-port-ssl": 8444,
+      "https-redirect": false,
+      "service-port": 10202
+    }
+  }
+}

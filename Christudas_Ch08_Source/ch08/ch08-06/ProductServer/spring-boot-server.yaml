@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spring-boot-server
+  labels:
+    app: spring-boot-server
+spec:
+  hostname: spring-boot-server
+  subdomain: spring-boot-server
+  containers:
+  - name: springserver
+    image: "pengtaoman/spring-boot-server:v0.0.1"
+    imagePullPolicy: IfNotPresent
+    ports:
+      - containerPort: 8080
+        name: client
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-server
+  labels:
+    app: spring-boot-server
+spec:
+  clusterIP: None
+  ports:
+    - port: 8080
+      targetPort: 8080
+      name: client
+  selector:
+    app: spring-boot-server

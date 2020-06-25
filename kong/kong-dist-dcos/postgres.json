@@ -1,0 +1,36 @@
+{
+  "service": {
+    "name": "postgresql"
+  },
+  "postgresql": {
+    "cpus": 0.3,
+    "mem": 512
+  },
+  "database": {
+    "username": "kong",
+    "password": "kong",
+    "dbname": "kong"
+  },
+  "storage": {
+    "host_volume": "/tmp",
+    "pgdata": "pgdata",
+    "persistence": {
+      "enable": true,
+      "volume_size": 512,
+      "external": {
+        "enable": false,
+        "volume_name": "postgresql",
+        "provider": "dvdi",
+        "driver": "rexray"
+      }
+    }
+  },
+  "networking": {
+    "port": 5432,
+    "host_mode": false,
+    "external_access": {
+      "enable": false,
+      "external_access_port": 15432
+    }
+  }
+}

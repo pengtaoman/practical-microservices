@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spring-boot-web
+  labels:
+    app: spring-boot-web
+spec:
+  hostname: spring-boot-web
+  subdomain: spring-boot-web
+  containers:
+  - name: boot-web
+    image: "pengtaoman/spring-boot-web:v0.0.1"
+    imagePullPolicy: IfNotPresent
+    ports:
+      - containerPort: 8084
+        name: client
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-web
+  labels:
+    app: spring-boot-web
+spec:
+  clusterIP: None
+  ports:
+    - port: 8084
+      targetPort: 8084
+      name: client
+  selector:
+    app: spring-boot-web
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-boot-web-nodeport
+  labels:
+    app: spring-boot-web-nodeport
+spec:
+  type: NodePort
+  ports:
+    - port: 8084
+      targetPort: 8084
+      nodePort: 31084
+      name: client
+  selector:
+    app: spring-boot-web

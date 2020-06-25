@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: demo002
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /foo002
+        backend:
+          serviceName: echo
+          servicePort: 80

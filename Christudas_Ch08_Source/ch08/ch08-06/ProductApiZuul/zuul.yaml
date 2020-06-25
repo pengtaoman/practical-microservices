@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: zuul
+  labels:
+    app: zuul
+spec:
+  hostname: zuul-demo
+  subdomain: zuul-spring
+  containers:
+  - name: zuul
+    image: "pengtaoman/zuul:v0.0.1"
+    imagePullPolicy: IfNotPresent
+    ports:
+      - containerPort: 8082
+        name: client
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: zuul-spring
+  labels:
+    app: zuul-spring
+spec:
+  clusterIP: None
+  ports:
+    - port: 8082
+      targetPort: 8082
+      name: client
+  selector:
+    app: zuul

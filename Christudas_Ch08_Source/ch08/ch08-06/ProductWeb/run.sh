@@ -1,0 +1,1 @@
+java -Dserver.port=8084 -Dspring.application.name=product-web -Deureka.client.serviceUrl.defaultZone=http://eureca-demo.spring:8761/eureka/ -jar /Ecom-Product-Microservice-0.0.1-SNAPSHOT.jar
